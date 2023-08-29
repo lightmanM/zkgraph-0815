@@ -1,11 +1,12 @@
-specVersion: 0.0.2
-description: Demo graph for zkAutomation.
+specVersion: 0.0.1
+name: dETF(WBTC-WETH)
+description: Demo graph for zkAutomation. Use the source contract address as the trigger payload.
 repository: https://github.com/hyperoracle/zkgraph
 dataSources:
   - kind: ethereum/contract
     network: mainnet
     source:
-      address: '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc'
+      address: '0xbb2b8038a1640196fbe3e38816f3e67cba72d940'
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.1
@@ -16,6 +17,6 @@ dataSources:
           handler: handleEvents
 dataDestinations:
   - kind: ethereum/contract
-    network: mainnet
+    network: sepolia
     destination:
-      address: '0x123abc'
+      address: '0x7C585B7E9D3364dC14CDfE545Bf9A333d5dBd1D6'
